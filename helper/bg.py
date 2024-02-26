@@ -1,6 +1,8 @@
 import io
 import os
 import typing
+
+import matplotlib.pyplot as plt
 from PIL import Image
 from pymatting.alpha.estimate_alpha_cf import estimate_alpha_cf
 from pymatting.foreground.estimate_foreground_ml import estimate_foreground_ml
@@ -12,7 +14,7 @@ import torch
 import torch.nn.functional
 import torch.nn.functional
 from hsh.library.hash import Hasher
-from u2net import detect, u2net
+from helper.u2net import detect, u2net
 
 # closes https://github.com/nadermx/backgroundremover/issues/18
 if torch.cuda.is_available():

@@ -1,4 +1,4 @@
-from u2net import u2net, data_loader
+from helper.u2net import u2net, data_loader
 import torch
 import os
 import numpy as np
@@ -9,10 +9,10 @@ from PIL import Image
 def load_model(model_name: str = "u2net"):
     if model_name == "u2net":
         net = u2net.U2NET(3, 1)
-        path = './models/u2net.pth'
+        path = '../models/u2net.pth'
     elif model_name == "u2netp":
         net = u2net.U2NETP(3, 1)
-        path = './models/u2netp.pth'
+        path = 'D:/Repositories/RemoveBg-Python/helper/models/u2netp.pth'
 
     if torch.cuda.is_available():
         net.load_state_dict(torch.load(path))

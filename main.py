@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-import bg
+from helper import bg
 
 alpha_matting = False
 af = 240
@@ -9,7 +9,7 @@ ae = 10
 az = 1000
 model_name = "u2netp"
 
-with open('../data/HinhChuKy1.png', 'rb') as fh:
+with open('data/HinhChuKy2.png', 'rb') as fh:
     buf = fh.read()
 
 img_remove = bg.remove(buf, model_name, alpha_matting)
