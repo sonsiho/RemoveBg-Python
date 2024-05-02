@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-
 from helper import bg
 
 alpha_matting = False
@@ -9,7 +7,7 @@ ae = 10
 az = 1000
 model_name = "u2netp"
 
-with open('data/HinhChuKy6.png', 'rb') as fh:
+with open('data/HinhChuKy1.png', 'rb') as fh:
     buf = fh.read()
 
 img_remove = bg.remove(buf, model_name, alpha_matting)
@@ -19,4 +17,4 @@ img_remove = bg.remove(buf, model_name, alpha_matting)
 # plt.imshow(img_remove)
 # plt.show()
 
-img_remove.save('data/Results/HinhChuKy6_rembg.png')
+img_remove.save('data/Results/HinhChuKy1_rembg.png')

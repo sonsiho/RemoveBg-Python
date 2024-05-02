@@ -168,6 +168,7 @@ def remove(
     img = Image.open(io.BytesIO(data)).convert("RGB")
     mask = detect.predict(model, np.array(img)).convert("L")
 
+    # mask.save(f"D:\Repositories\QLHS\ExternalLibCustom\RemoveBackgroundSignature\data\Mask\HinhChuKy1_mask.png")
     if alpha_matting:
         cutout = alpha_matting_cutout(
             img,
